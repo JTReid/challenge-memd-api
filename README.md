@@ -21,7 +21,7 @@ Lets build a MeMD integration. This 3rd party integration will have to be built 
       - Each MeMD Member has attached medical policies. This endpoint will expire those policies
 
 
-# Endpoint Information:
+  Endpoint Information:
     - Payload Notes:
       - We define the external_id and this will act as a primary key for MeMD
       - The address fields need to populated with a home address. Members can have both a home and a mailing address. If a dependent does not have a home address, then we will use the primary's home address. The primary will always have a home address.
