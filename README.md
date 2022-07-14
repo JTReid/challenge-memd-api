@@ -11,18 +11,14 @@
 
 ### MeMD 3rd Party Integration
 
-Lets build a MeMD integration. This 3rd party integration will have to be built from scratch, because there are no gems currently available. Here are the requirements:
+Lets build a MeMD integration. This 3rd party integration will have to be built from scratch, because there are gems currently available. Here are the requirements:
 
 We’ll use a Bearer token to authenticate all our requests by adding it into headers. Bearer tokens expire every 25 hours. We'll supply the token when we open the project together and we'll send it over in an Authorization header. We’ll need to accommodate these endpoints:
 
-  - POST create primary/dependent
+  - POST - create primary/dependent
       - This takes a collection of ActiveRecord objects and creates a MeMD Member
-  - GET retrieve member
+  - GET - retrieve member
       - Simply retrieves a MeMD Member via the external_id field (which we will define)
-  - POST activate policy
-      - This takes a member with expired policies and reactivates their policies
-  - POST terminate policy
-      - Each MeMD Member has attached medical policies. This endpoint will expire those policies
 
 
 ### Endpoint Information:
