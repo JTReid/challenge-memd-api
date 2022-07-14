@@ -11,7 +11,7 @@
 
 ### MeMD 3rd Party Integration
 
-Lets build a MeMD integration. This 3rd party integration will have to be built from scratch, because there are gems currently available. Here are the requirements:
+Lets build a MeMD integration. This 3rd party integration will have to be built from scratch, because there are no gems currently available. Here are the requirements:
 
 We’ll use a Bearer token to authenticate all our requests by adding it into headers. Bearer tokens expire every 25 hours. We'll supply the token when we open the project together and we'll send it over in an Authorization header. We’ll need to accommodate these endpoints:
 
