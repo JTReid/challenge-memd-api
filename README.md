@@ -25,7 +25,7 @@ We’ll use a Bearer token to authenticate all our requests by adding it into he
 
 ##### Payload Notes:
 
-We get to define the external_id and this will act as a primary key for the MeMD Member object. The address fields need to populated with a 'home' address. This is found on the Address object under the is_type attribute. Members can have both a home and a mailing address. If a dependent does not have a home address, then we will use the primary's home address. 
+We get to define the external_id and this will act as a primary key for the MeMD Member object. The address fields need to be populated with a 'home' address. This distinction is found on the Address object under the is_type attribute. Members can have both a home and a mailing address. If a dependent does not have a home address, then we will use the primary's home address. 
 
   - POST#create for primary members:
     - URL: http://cratebind-challenge-api.com/memd/members
