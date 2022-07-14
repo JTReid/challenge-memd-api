@@ -29,6 +29,7 @@ We get to define the external_id and this will act as a primary key for the MeMD
 
   - POST#create for primary members:
     - URL: http://cratebind-challenge-api.com/memd/members
+    - All fields are required except street_2
     - Response will be the member
     - Payload: 
 ```ruby
