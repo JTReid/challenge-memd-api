@@ -11,21 +11,23 @@
 
 ### MeMD 3rd Party Integration
 
-Lets build a MeMD integration. This 3rd party integration will have to be built from scratch, because there are gems currently available. Here are the requirements:
+Lets prototype a MeMD integration. This 3rd party integration will have to be built from scratch, because there are gems currently available. Here are the requirements:
 
-We’ll use a Bearer token to authenticate all our requests by adding it into headers. Bearer tokens expire every 25 hours. We'll supply the token when we open the project together and we'll send it over in an Authorization header. We’ll need to accommodate these endpoints:
+We’ll use a Bearer token to authenticate all our requests by adding it into headers. We'll supply the token via email and you send it over in an Authorization header. We’ll need to accommodate these endpoints:
 
-  - POST - create primary/dependent
-      - This takes a collection of ActiveRecord objects and creates a MeMD Member
+  - POST - create primary
+      - This takes the below payload and creates a MeMD Primary Member
+  - POST - create dependent
+      - This takes the below payload and creates a MeMD Dependent Member
   - GET - retrieve member
-      - Simply retrieves a MeMD Member via the external_id field (which we will define)
+      - Simply retrieves a MeMD Member via the external_id field (which you get to define)
 
 
 ### Endpoint Information:
 
 ##### Payload Notes:
 
-We get to define the external_id and this will act as a primary key for the MeMD Member object. The address fields need to be populated with a 'home' address. This distinction is found on the Address object under the is_type attribute. Members can have both a home and a mailing address. If a dependent does not have a home address, then we will use the primary's home address. 
+You'll need to define the external_id field. The only restrictions are it must be an integer, and its unique. This will act as a primary key for the MeMD Member object. The address fields need to be populated with a 'home' address. This distinction is found on the Address object under the is_type attribute. Members can have both a home and a mailing address. If a dependent does not have a home address, then we will use the primary's home address. 
 
   - POST#create for primary members:
     - URL: http://cratebind-challenge-api.com/memd/members
