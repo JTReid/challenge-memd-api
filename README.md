@@ -9,25 +9,25 @@
   
   After seeding the database you should have 3 Accounts, 10 Members and 4 Addresses.
 
-### MeMD 3rd Party Integration
+### 3rd API Party Integration
 
-Lets prototype a MeMD integration. This 3rd party integration will have to be built from scratch, because there are gems currently available. Here are the requirements:
+Lets prototype a 3rd party API integration. This 3rd party integration will have to be built from scratch, because there are gems currently available. Here are the requirements:
 
-We’ll use a Bearer token to authenticate all our requests by adding it into headers. We'll supply the token via email and you send it over in an Authorization header. We’ll need to accommodate these endpoints:
+We’ll use a Bearer token to authenticate all our POST & GET requests by adding it into headers. We'll supply you the token via email and you send it over in an Authorization header. We’ll need to accommodate these endpoints:
 
-  - POST - create primary
-      - This takes the below payload and creates a MeMD Primary Member
-  - POST - create dependent
-      - This takes the below payload and creates a MeMD Dependent Member
+  - POST - create primary member
+      - This takes the below payload and creates a Primary Member
+  - POST - create dependent member
+      - This takes the below payload and creates a Dependent Member
   - GET - retrieve member
-      - Simply retrieves a MeMD Member via the external_id field (which you get to define)
+      - Simply retrieves a Member via the external_id field (which you get to define)
 
 
 ### Endpoint Information:
 
 ##### Payload Notes:
 
-You'll need to define the external_id field. The only restrictions are it must be an integer, and its unique. This will act as a primary key for the MeMD Member object. The address fields need to be populated with a 'home' address. This distinction is found on the Address object under the is_type attribute. Members can have both a home and a mailing address. If a dependent does not have a home address, then we will use the primary's home address. 
+You'll need to define the external_id field. The only restrictions are it must be an integer, and its unique. This will act as a primary key for the Member object. The address fields need to be populated with a 'home' address. This distinction is found on the Address object under the is_type attribute. Members can have both a home and a mailing address. If a dependent does not have a home address, then we will use the primary's home address. 
 
   - POST#create for primary members:
     - URL: http://cratebind-challenge-api.com/memd/members
@@ -69,7 +69,7 @@ You'll need to define the external_id field. The only restrictions are it must b
     - Response will be the member
 
 
- Feel free to construct this integration however you like. When we are finished, we'll use the Rails console to interact with the MeMD API
+ Feel free to construct this integration however you like. When we are finished, we'll use the Rails console to interact with the API
 
 
 
