@@ -11,9 +11,9 @@
 
 ### 3rd API Party Integration
 
-Lets prototype a 3rd party API integration. This 3rd party integration will have to be built from scratch, because there are gems specific to this integration that are currently available. Here are the requirements:
+Lets prototype a 3rd party API integration. Here are the requirements:
 
-We’ll use a Bearer token to authenticate all our POST & GET requests by adding it into headers. We'll supply you the token via email and you send it over in an Authorization header. We’ll need to accommodate these endpoints:
+We’ll use a Bearer token to authenticate all our POST & GET requests by adding it into headers. We'll supply you with the token via email and you can send it over in an Authorization header. We’ll need to accommodate these endpoints:
 
   - POST - create primary member
       - This takes the below payload and creates a Primary Member
